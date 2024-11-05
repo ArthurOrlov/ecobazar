@@ -17,10 +17,11 @@
 
 .department-contacts__title {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .department-contacts__container {
-  padding: 100px 0;
+  padding: 100px 60px;
 }
 
 .department-contacts__block {
@@ -62,6 +63,12 @@
   margin-bottom: 10px;
 }
 
+
+/* events */
+
+.events__container {
+  padding: 100px 60px;
+}
 
 /* lib  */
 
