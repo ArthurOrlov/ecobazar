@@ -88,7 +88,7 @@ header {
 
 .events__container {
   display: flex;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 
 .events__line {
@@ -362,11 +362,21 @@ h3 {
   text-decoration: none;
   color: #000;
   margin-top: 60px;
+  outline: none;
+  background-position: center;
+  transition: background .5s;
 }
 
 .information__link:hover,
 .rent__block-contacts__link:hover {
+  background: var(--color-light-yellow) radial-gradient(circle, transparent 1%, var(--color-light-yellow) 1%) center/15000%;
+}
+
+.information__link:active,
+.rent__block-contacts__link:active {
   background-color: var(--color-light-yellow);
+  background-size: 100%;
+  transition: background 0s;
 }
 
 
@@ -376,6 +386,15 @@ h3 {
   max-width: 100vw;
   height: 80vh;
   background-image: url(../img/map.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts-mitishi {
+  max-width: 100vw;
+  height: 80vh;
+  background-image: url(../img/mapmitishi.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -415,7 +434,7 @@ h4 {
 }
 
 .contacts__block-address--text {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .contacts__block-address--text,
@@ -473,6 +492,27 @@ h4 {
   margin-right: 10px;
 }
 
+.contacts__block-address--calendar {
+  color: #000;
+  cursor: pointer;
+  padding: 7px 30px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: var(--color-yellow);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: all .8s;
+}
+
+.contacts__block-address--calendar:hover {
+  background-color: var(--color-light-yellow);
+}
+
+.contacts__block-address--calendar-img {
+  width: 12px;
+}
+
 
 
 /* Rent  */
@@ -497,6 +537,14 @@ h4 {
 .rent__half:nth-child(2) {
   padding: 100px 60px;
   max-width: 700px;
+}
+
+.rent__half-mitishi {
+  width: 50%;
+  background-image: url(../img/mitishi.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .rent__block-up {
