@@ -24,6 +24,28 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.rent-contacts__menu-item').forEach(function (tabsClick) {
+    tabsClick.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
+
+      document.querySelectorAll('.rent-contacts__menu-item').forEach(function (tabContent) {
+        tabContent.classList.remove('rent-contacts__menu-item-active')
+      })
+      document.querySelector(`[data-path="${path}"]`).classList.add('rent-contacts__menu-item-active');
+    })
+  })
+});
+
+let fakeinput = document.querySelectorAll('.fakeinput');
+let hold = document.querySelectorAll('.holder');
+
+for (let i = 0; i < fakeinput.length; i++) {
+  fakeinput[i].addEventListener('input', function () {
+    hold[i].style.display = (this.value == "") ? 'inline' : 'none';
+  });
+}
+
 const btsFilter = Array.from(document.querySelectorAll('[data-filter]'))
 
 const colors = ['beef', 'delicacies', 'fish', 'vegetables', 'fruits', 'berries', 'birds', /*, .... */]
