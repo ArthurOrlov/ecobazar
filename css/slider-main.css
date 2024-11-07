@@ -42,13 +42,13 @@
 
 
 .carousel-arrows {
-  width: 20%;
+  width: 12%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 85%;
-  right: 163%;
+  top: 90%;
+  right: 160%;
   padding: 0;
 }
 
@@ -64,10 +64,14 @@
   height: 17px;
 }
 
+.ant-carousel-arrow-left--img {
+  width: 10px;
+}
+
 .ant-carousel-arrow-left,
 .ant-carousel-arrow-right {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: all .25s ease-in;
   border-radius: 50%;
@@ -75,7 +79,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #f5f5f5;
+  border: 1px solid #ccc;
 }
 
 .ant-carousel-arrow-left:hover,

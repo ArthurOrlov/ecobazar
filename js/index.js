@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.filter').forEach(function (tabs) {
+    tabs.addEventListener('click', function (evnt) {
+      const filter = evnt.currentTarget.dataset.filter
+
+      document.querySelectorAll('.filter').forEach(function (tabList) {
+        tabList.classList.remove('filter-active')
+      })
+      document.querySelector(`[data-filter="${filter}"]`).classList.add('filter-active');
+    })
+  })
+});
+
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.rent-contacts__menu-item').forEach(function (tabsClick) {
     tabsClick.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path
@@ -93,7 +106,7 @@ button.onclick = function () {
   // Отобразить следующие hiddenItemCount элементов
   for (var i = visibleItemCount; i < visibleItemCount + hiddenItemCount; i++) {
     if (items[i]) {
-      items[i].style.display = "block";
+      items[i].style.display = "flex";
     }
   }
 
