@@ -663,24 +663,30 @@
     <div class="container contacts__container">
       <div class="contacts__block">
         <h4>контакты</h4>
-        <div class="contacts__block-address">
-          <p class="contacts__block-address--title">адрес</p>
-          <p class="contacts__block-address--text">г. Обнинск, проспект Маркса, д. 130</p>
-          <div class="contacts__block-address--link">
-            <a class="contacts__block-address--link-item" href="https://yandex.ru/maps/-/CDhWIEYs" target="_blank">Как
-              добраться<img class="contacts__block-address--link-item--img" src="./img/whitearrow.png" alt="arrow"></a>
-            <a class="contacts__block-address--link-item" href="">карта экобазара<img
-                class="contacts__block-address--link-item--img" src="./img/whitearrow.png" alt="arrow"></a>
+
+        <div>
+          <div class="contacts__block-address">
+            <p class="contacts__block-address--title">адрес</p>
+            <p class="contacts__block-address--text">г. Обнинск, проспект Маркса, д. 130</p>
+            <div class="contacts__block-address--link">
+              <a class="contacts__block-address--link-item" href="https://yandex.ru/maps/-/CDhWIEYs" target="_blank">Как
+                добраться<img class="contacts__block-address--link-item--img" src="./img/whitearrow.png"
+                  alt="arrow"></a>
+              <a class="contacts__block-address--link-item" href="">карта экобазара<img
+                  class="contacts__block-address--link-item--img" src="./img/whitearrow.png" alt="arrow"></a>
+            </div>
+          </div>
+          <div class="contacts__block-address--telmail">
+            <div><a href="tel:+79605227878" class="contacts__block-address--tel-link">+7 (960) 522-78-78</a></div>
+            <div><a href="mailto:info@eco-bazar.ru" class="contacts__block-address--mail-link">info@eco-bazar.ru</a>
+            </div>
+          </div>
+          <div>
+            <p class="contacts__block-address--title">режим работы</p>
+            <p class="contacts__block-address--text">ежедневно с 9:00 до 21:00</p>
           </div>
         </div>
-        <div class="contacts__block-address--telmail">
-          <div><a href="tel:+79605227878" class="contacts__block-address--tel-link">+7 (960) 522-78-78</a></div>
-          <div><a href="mailto:info@eco-bazar.ru" class="contacts__block-address--mail-link">info@eco-bazar.ru</a></div>
-        </div>
-        <div>
-          <p class="contacts__block-address--title">режим работы</p>
-          <p class="contacts__block-address--text">ежедневно с 9:00 до 21:00</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -712,12 +718,22 @@
         </div>
 
         <div class="rent__block-middle">
-          <div class="rent__block-middle--nameblock">
-            <input class="rent__block-middle--name" type="text" placeholder="Имя/бренд">
-            <input class="rent__block-middle--phone" type="tel" placeholder="Телефон*">
+          <div class="input-star--half-block">
+            <div class="input-star input-star--half">
+              <input class="fakeinput" type="text">
+              <span class="holder">Имя/бренд</span>
+            </div>
+            <div class="input-star input-star--half">
+              <input class="fakeinput" required type="tel">
+              <span class="holder">Телефон<span>*</span></span>
+            </div>
           </div>
 
-          <input class="rent__block-middle--question" type="text" placeholder="Опишите Ваш бизнес или задайте вопрос">
+          <div class="input-star">
+            <input class="fakeinput rent__block-middle--question" type="text">
+            <span class="holder">Опишите Ваш бизнес или задайте вопрос</span>
+          </div>
+
           <form id="upload-container" method="POST" action="send.php">
             <div>
               <input id="file-input" type="file" name="file" multiple>
